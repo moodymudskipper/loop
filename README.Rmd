@@ -47,7 +47,8 @@ remotes::install_github("moodymudskipper/loop")
 We get used to the apply functions, but : 
 
 * They're hard to grasp at first
+* No way to leverage the applied function's autocomplete
 * The IDE highlights the apply function, not the applied function
-* It's more intuitive to have the applied verb first
 * No need to shuffle the arguments when going from `lapply` to `Map` or `sapply` to `mapply`
 * Much more compact to use constant arguments with `Map` and `sapply`
+* I believe its more intuitive to have the applied function first
