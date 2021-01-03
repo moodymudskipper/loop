@@ -28,10 +28,13 @@ loop$rep(+11:12, 2)    # same thing, but we benefit from autocomplete
 loop$rep(+11:12, +1:2) # rather than `Map(rep, 11:12, 1:2)`
 
 # rather than `Map(function(...) rep(..., each =2), 11:12, 1:2)` :
-loop$rep(+11:12, +1:2, each = 2) 
+loop$rep(+11:12, +1:2, each = 2)
 
 l <- list(iris, cars)
 loop2$nrow(+l) # rather than `sapply(l, nrow)`
+
+# we can loop on nested "plussed" arguments too
+loop$mean(c(+11:12,+1:2))
 ```
 
 ## Installation
@@ -50,5 +53,5 @@ We get used to the apply functions, but :
 * No way to leverage the applied function's autocomplete
 * The IDE highlights the apply function, not the applied function
 * No need to shuffle the arguments when going from `lapply` to `Map` or `sapply` to `mapply`
-* Much more compact to use constant arguments with `Map` and `sapply`
+* Much more compact to use constant arguments with `Map` and `mapply`
 * I believe its more intuitive to have the applied function first
